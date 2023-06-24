@@ -2,9 +2,46 @@
 //
 
 #include <iostream>
+#include <string>
+
+// HW:
+// 1. float can hold a lot of values but may give up for really large ones. Make the program handle larger numbers.
+// 2. Make the program handle additional operations. You can take your pick on what to use.
+
+void calculator_program() {
+	std::cout << "Enter inputs like a @ b where a and b are numbers, and @ is any operator among +, -, *, /\n";
+
+	while (true) {
+		std::string aStr, bStr;
+		char op = 0;
+
+		std::cout << "> ";
+		std::cin >> aStr >> op >> bStr;
+
+		float a = std::stof(aStr), b = std::stof(bStr);
+
+		float result = 0.F;
+		switch (op) {
+			case '+':
+				result = a + b;
+				break;
+			case '-':
+				result = a - b;
+				break;
+			case '*':
+				result = a * b;
+				break;
+			case '/':
+				result = a / b;
+				break;
+		}
+
+		std::cout << "= " << result << '\n';
+	}
+}
 
 int main() {
-	std::cout << "Hello World!\n";
+	//calculator_program();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
