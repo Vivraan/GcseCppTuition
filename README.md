@@ -35,13 +35,21 @@ An optional activity meant to challenge the student. The student is encouraged t
 
 `EXTRA CREDIT` activities may be unrelated to the syllabus, but are expected to be answered after a certain amount of experience in the related topic is gained, or if the student is keen on the topic.
 
+*The regular expression for matching these keywords in text can be debugged [here](https://www.debuggex.com/r/lBZe033_m_1584xV)*.
+
 ## Quality of life stuff (optional)
 1. Install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter*:
+
 	a. *Features > Highlight selection* = `False`
+
 	a. *Search > Include strings* = `False`
+
 	a. *Search > Search whole words only* = `False`
+
 	a. *Selection > Select letter or digit only* = `False`
+
 	a. *TODO > TODO words* = `TODO|HACK|EXTRA CREDIT|HOMEWORK ?[0-9]*|REVISE|QUESTION|CONSIDER| ?-? ?[0-9] STARS?:?`
+
 1. Install ReSharper and use the provided `*.sln.DotSettings` file.
 
 This will highlight all the keywords used in the code comments.
