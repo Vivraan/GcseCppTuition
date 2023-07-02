@@ -40,15 +40,11 @@ An optional activity meant to challenge the student. The student is encouraged t
 ## Quality of life stuff (optional)
 1. Install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter*:
 
-	a. *Features > Highlight selection* = `False`
-
-	a. *Search > Include strings* = `False`
-
-	a. *Search > Search whole words only* = `False`
-
-	a. *Selection > Select letter or digit only* = `False`
-
-	a. *TODO > TODO words* = `TODO|HACK|EXTRA CREDIT|HOMEWORK ?[0-9]*|REVISE|QUESTION|CONSIDER| ?-? ?[0-9] STARS?:?`
+	1. *Features > Highlight selection* = `False`
+	1. *Search > Include strings* = `False`
+	1. *Search > Search whole words only* = `False`
+	1. *Selection > Select letter or digit only* = `False`
+	1. *TODO > TODO words* = `TODO|HACK|EXTRA CREDIT|HOMEWORK ?[0-9]*|REVISE|QUESTION|CONSIDER| ?-? ?[0-9] STARS?:?`
 
 1. Install ReSharper and use the provided `*.sln.DotSettings` file.
 
