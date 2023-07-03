@@ -1,124 +1,94 @@
 // GcseCppTuition.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include <cstdint>
 #include <iostream>
 #include <string>
+#include <vector>
 
-// EXTRA CREDIT - 7 STARS: What does [[noreturn]] do?
-// J: It tells the compiler that the function never returns.
-[[noreturn]] void calculator_program() {
+// HOMEWORK 0: Write a function that prints the numbers from 1 to 100, but for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
+void fizzbuzz() {
+	// TODO
+}
 
-	// HOMEWORK 1 - 2 STARS:
-	// 1. float can hold a lot of values but may give up for really large ones. Make the program handle larger numbers.
-	// J: We can use the type "double".
+// HOMEWORK 1: Write a function that finds the average or mean of an array of numbers.
+float mean(uint32_t n, float arr[]) {
+	 // TODO
+	return 0.F;
+}
 
-	// 2. Make the program handle additional operations. You can take your pick on what to use.
-	// J: Power of ( e.g. 2 ^ 3 = 8 )
-	// J: Modulo (converts to integer type)
+// CONSIDER: Do HOMEWORK 1 using std::vector instead of a C-style array. What are the advantages of using std::vector?
+float mean(const std::vector<float>& vec) {
+	// TODO
+	return 0.F;
+}
 
-	std::cout << "Enter inputs like a @ b where a and b are numbers, and @ is any operator among +, -, *, /, ^, %.\n";
+// EXTRA CREDIT: Do HOMEWORK 1 using std::array instead of a C-style array, without specifying the size of the std::array.
+// What are the advantages of using std::array?
+// Hint: research "std::span" and "iterators"
+
+// Here's a program that I made for you.
+[[noreturn]] void student_names_database_program() {
+	const std::vector student_names{"Flinn", "Sam", "Cody", "JFK"};
 
 	while (true) {
-		std::string a_str, b_str;
-		char op = 0;
+		std::string to_find;
+		std::cout << "Please enter the name of a student: ";
+		std::cin >> to_find;
 
-		std::cout << "> ";
-		std::cin >> a_str >> op >> b_str;
-
-		// REVISE - 2 STARS: What does this do?
-		// Const means the value can't be changed after assignment.
-		// "std::stof" means string to float so it converts the string to a float type
-		// In conclusion, it converts a_str and b_str to float constants.
-		const double a = std::stof(a_str), b = std::stof(b_str);
-
-		// CONSIDER - 5 STARS: The program crashes if you enter a non-number. How can you fix this using exceptions?
-		// J: I haven't learnt what an exception is. You can add validation to check if it is a non-number so the program doesn't crash.
-
-		// EXTRA CREDIT - 7 STARS: Solve the above problem without using exceptions (a) as you would in C (b) using C++ features.
-
-		double result;
-		switch (op) {
-			case '+':
-				result = a + b;
-				// REVISE - 1 STAR: What does this do?
-				// J: It terminates execution of the switch.
-				break;
-			case '-':
-				result = a - b;
-				break;
-			case '*':
-				result = a * b;
-				break;
-			case '/':
-				result = a / b;
-				break;
-			case '^':
-				result = a;
-				for (int i = 0; i < b; i++) {
-					result = result * a;
-				}
-				break;
-			case '%':
-				result = int(a) % int(b);
-				break;
-			// QUESTION - 3 STARS: What does the following do?
-			// If none of the above cases happen, it will print an error message.
-			default:
-				std::cerr << '\'' << op << "\': Bad operator.\n";
-				continue;
+		// QUESTION: What's going on here?
+		for (const auto& name : student_names) {// QUESTION: What is "auto" doing here?
+			if (to_find == name) {
+				std::cout << "Found!\n";
+				goto end;
+			}
 		}
 
-		std::cout << "= " << result << '\n';
+		std::cout << "Not found :(\n";
+
+	end:;// QUESTION: What's this?
+
+		// QUESTION: I used "goto", but it's almost never a good keyword to use. What could I use instead?
+		// CONSIDER: Is my use of "goto" justified here? Answer in your own words.
 	}
 }
 
-// HOMEWORK 2 - 3 STARS
-// Write a function that prints the number of digits in a number. For example, 123 has 3 digits, 0 has 1 digit, and -123 has 3 digits.
+// HOMEWORK 2, HOMEWORK 3: Write two functions, one for finding the median of a list of numbers, and the other the mode.
+// CONSIDER using std::vector. EXTRA CREDIT for using std::array.
 
-int countDigits(int b) {
-	std::string str = std::to_string(b);
-	int count = 0;
-
-	for (int i = 0; i < str.length(); i++) {
-		if (str[i] >= '0' && str[i] <= '9') {
-			count++;
-		}
-	}
-
-	return count;
+// HOMEWORK 4: Write a function that prints the position of pieces on a chessboard.
+// Use capital letters for black pieces and lowercase letters for white pieces.
+// Use the following characters for the pieces: K/k = King, Q/q = Queen, R/r = Rook, B/b = Bishop, N/n = Knight, P/p = Pawn
+// Write outputs like this:
+// B2 B
+// C2 P
+// D2 n
+// Here indices are written as a letter followed by a number, with the letter indicating the column (file) and the number indicating the row (rank).
+// Ranks are numbered from 1 to 8, with 1 being the bottom rank and 8 being the top rank.
+// Files are lettered from A to H, with A being the leftmost file and H being the rightmost file.
+void print_piece_positions(char board[8][8]) {
+	// TODO
 }
 
-// HOMEWORK 3 - 3 STARS
-// Write a function that checks if a number is a power of 2 (i.e. 2, 4, 8, 16, 32, ...). Hint: Use a loop.
-
-void isPowerOf2(unsigned int a)
-{
-	unsigned int num = a;
-
-	while (true) {
-		if (a % 2 == 1) {
-			std::cout << num << " is not a power of 2."
-								<< "\n";
-			break;
-		}
-		a = a / 2;
-		if (a == 1) {
-			std::cout << num << " is a power of 2."
-								<< "\n";
-			break;
-		}
-	}
-}
-
-// EXTRA CREDIT - 7 STARS: Solve the above problem without using a loop.
-// J: I don't know how
+// EXTRA CREDIT: In HOMEWORK 3, also check if the arrangement of pieces is a valid chess position.
 
 int main() {
-	std::cout << countDigits(10) << "\n";
-	std::cout << countDigits(-123) << "\n";
-	isPowerOf2(64);
-	isPowerOf2(86);
-	calculator_program();
+	float arr[] = {1, 1, 1, 1, 0.5F};
+	std::cout << mean(5, arr) << '\n';
+	std::cout << mean(std::vector(std::begin(arr), std::end(arr))) << '\n';
+
+	char chessboard[8][8] = {
+		{'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'},
+		{'P', 'P', 'P', 'P', '.', 'P', 'P', 'P'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'.', '.', '.', 'p', '.', '.', '.', '.'},
+		{'.', '.', '.', '.', 'P', '.', '.', '.'},
+		{'.', '.', '.', '.', '.', '.', '.', '.'},
+		{'p', 'p', 'p', '.', 'p', 'p', 'p', 'p'},
+		{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
+	print_piece_positions(chessboard);
+
+	student_names_database_program();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

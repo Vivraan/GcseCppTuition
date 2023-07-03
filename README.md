@@ -38,7 +38,7 @@ An optional activity meant to challenge the student. The student is encouraged t
 *The regular expression for matching these keywords in text can be debugged [here](https://www.debuggex.com/r/lBZe033_m_1584xV)*.
 
 ## Quality of life stuff (optional)
-1. Install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter*:
+1. On Visual Studio, install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter*:
 
 	1. *Features > Highlight selection* = `False`
 	1. *Search > Include strings* = `False`
@@ -46,6 +46,6 @@ An optional activity meant to challenge the student. The student is encouraged t
 	1. *Selection > Select letter or digit only* = `False`
 	1. *TODO > TODO words* = `TODO|HACK|EXTRA CREDIT|HOMEWORK ?[0-9]*|REVISE|QUESTION|CONSIDER| ?-? ?[0-9] STARS?:?`
 
-1. Install ReSharper and use the provided `*.sln.DotSettings` file.
+1. Install ReSharper for Visual Studio and use the provided `*.sln.DotSettings` file.
 
 This will highlight all the keywords used in the code comments.
