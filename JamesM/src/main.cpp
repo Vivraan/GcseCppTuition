@@ -8,19 +8,48 @@
 
 // HOMEWORK 0: Write a function that prints the numbers from 1 to 100, but for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
 void fizzbuzz() {
-	// TODO
+	for (int i = 1; i <= 100; i++) {
+		if (i % 3 == 0 || i % 5 == 0) {
+			if (i % 3 == 0) {
+				std::cout << "Fizz ";
+			}
+			if (i % 5 == 0) {
+				std::cout << "Buzz";
+			}
+		} else {
+			std::cout << i;
+		}
+		std::cout << "\n";
+	}
 }
 
 // HOMEWORK 1: Write a function that finds the average or mean of an array of numbers.
 float mean(uint32_t n, float arr[]) {
-	 // TODO
-	return 0.F;
+	float total = 0.0F;
+
+	for (uint32_t i = 0; i < n; i++) {
+		total = total + arr[i];
+	}
+
+	float average = total / n;
+
+	return average;
 }
 
 // CONSIDER: Do HOMEWORK 1 using std::vector instead of a C-style array. What are the advantages of using std::vector?
+// I don't have to pass the size of the array like with "uint32_t n".
 float mean(const std::vector<float>& vec) {
-	// TODO
-	return 0.F;
+	size_t size = vec.size();
+	float total = 0.0F;
+
+	for (size_t i = 0; i < size; i++) {
+		total = total + vec[i];
+	}
+
+	float average = total / size;
+
+	return average;
+
 }
 
 // EXTRA CREDIT: Do HOMEWORK 1 using std::array instead of a C-style array, without specifying the size of the std::array.
@@ -37,7 +66,8 @@ float mean(const std::vector<float>& vec) {
 		std::cin >> to_find;
 
 		// QUESTION: What's going on here?
-		for (const auto& name : student_names) {// QUESTION: What is "auto" doing here?
+		// It is a for loop that goes through all the elements in student_names array and if the name entered above matches one of the elements, it will say "Found!".
+		for (const auto& name : student_names) {// QUESTION: What is "auto" doing here? It is telling the program to find the most suitable data type of the variable.
 			if (to_find == name) {
 				std::cout << "Found!\n";
 				goto end;
@@ -47,13 +77,28 @@ float mean(const std::vector<float>& vec) {
 		std::cout << "Not found :(\n";
 
 	end:;// QUESTION: What's this?
+		// It's a point where if you say "goto end", the program will skip to that line of code and not do any code inbetween.
+
 
 		// QUESTION: I used "goto", but it's almost never a good keyword to use. What could I use instead?
+		// a break statement.
+		// 
 		// CONSIDER: Is my use of "goto" justified here? Answer in your own words.
+		//I think yes because the for loop checks if the entered name (x) is in the array. If (x) is in the array, the for loop will display a message and skip to the end.
+		// However, if no name is found, then the for loop will finish and go on to display the not found message. The goto makes it so you can skip this one line statement more easily.
+		
+
 	}
 }
 
 // HOMEWORK 2, HOMEWORK 3: Write two functions, one for finding the median of a list of numbers, and the other the mode.
+
+void medianAndMode()
+{
+}
+
+
+// 
 // CONSIDER using std::vector. EXTRA CREDIT for using std::array.
 
 // HOMEWORK 4: Write a function that prints the position of pieces on a chessboard.
@@ -67,15 +112,32 @@ float mean(const std::vector<float>& vec) {
 // Ranks are numbered from 1 to 8, with 1 being the bottom rank and 8 being the top rank.
 // Files are lettered from A to H, with A being the leftmost file and H being the rightmost file.
 void print_piece_positions(char board[8][8]) {
-	// TODO
+	for (int l = 0; l < 8; l++) {
+		for (int n = 0; n < 8; n++) {
+			if (board[l][n] != '.') {
+				char file = 'A' + l;
+				char rank = '8' - n;
+				std::cout << file << rank << " " << board[l][n] << "\n";
+			}
+		}
+	}
 }
+
+
+
 
 // EXTRA CREDIT: In HOMEWORK 3, also check if the arrangement of pieces is a valid chess position.
 
 int main() {
+	fizzbuzz();
+
+	// ----
+
 	float arr[] = {1, 1, 1, 1, 0.5F};
 	std::cout << mean(5, arr) << '\n';
 	std::cout << mean(std::vector(std::begin(arr), std::end(arr))) << '\n';
+
+	// ----
 
 	char chessboard[8][8] = {
 		{'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'},
@@ -88,7 +150,7 @@ int main() {
 		{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
 	print_piece_positions(chessboard);
 
-	student_names_database_program();
+	//student_names_database_program();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
