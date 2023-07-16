@@ -1,94 +1,73 @@
 // GcseCppTuition.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include <cassert>
 #include <cstdint>
 #include <iostream>
 #include <string>
-#include <vector>
 
-// HOMEWORK 0: Write a function that prints the numbers from 1 to 100, but for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
-void fizzbuzz() {
-	// TODO
+// EXTRA CREDIT: What does constexpr mean? Why is it useful?
+constexpr char not_implemented[] = "Not implemented";
+
+// HOMEWORK 1: Write a function that takes a string and returns the number of vowels and consonants in it.
+void count_vowels_and_consonants(const char input[], uint16_t& vowels, uint16_t& consonants) {
+	throw std::exception(not_implemented);
+	vowels = 0;
+	consonants = 0;
+}
+// CONSIDER: What happens if you use pointers (int* a) instead of references (int& a)?
+// EXTRA CREDIT: How will you return multiple values without using '&' or '*'?
+
+// HOMEWORK 2: Let's get funky! Write a function that takes a string and returns a string with the vowels removed.
+// Hint: you may want to use std::string for this.
+std::string remove_vowels(const std::string& input) {
+	throw std::exception(not_implemented);
+	return "";
+}
+// CONSIDER: Use std::string::erase() to remove characters from a string.
+// EXTRA CREDIT: Do this using a C-style string (char*) by allocating only 10% extra space at a time.
+
+// CONSIDER HOMEWORK 3: Write a function which only returns characters at indices which are part of the Fibonacci sequence.
+// Hint: The Fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, ... (each number is the sum of the previous two).
+// Example: "Hello World" -> "Heell r"; "Dinosaurs" -> "Diinas"; "Fortnite" -> "Foorti"; "James" -> "Jaame"
+std::string fibonacci_characters(const std::string& input) {
+	throw std::exception(not_implemented);
+	return "";
 }
 
-// HOMEWORK 1: Write a function that finds the average or mean of an array of numbers.
-float mean(uint32_t n, float arr[]) {
-	 // TODO
-	return 0.F;
-}
-
-// CONSIDER: Do HOMEWORK 1 using std::vector instead of a C-style array. What are the advantages of using std::vector?
-float mean(const std::vector<float>& vec) {
-	// TODO
-	return 0.F;
-}
-
-// EXTRA CREDIT: Do HOMEWORK 1 using std::array instead of a C-style array, without specifying the size of the std::array.
-// What are the advantages of using std::array?
-// Hint: research "std::span" and "iterators"
-
-// Here's a program that I made for you.
-[[noreturn]] void student_names_database_program() {
-	const std::vector student_names{"Flinn", "Sam", "Cody", "JFK"};
-
-	while (true) {
-		std::string to_find;
-		std::cout << "Please enter the name of a student: ";
-		std::cin >> to_find;
-
-		// QUESTION: What's going on here?
-		for (const auto& name : student_names) {// QUESTION: What is "auto" doing here?
-			if (to_find == name) {
-				std::cout << "Found!\n";
-				goto end;
-			}
-		}
-
-		std::cout << "Not found :(\n";
-
-	end:;// QUESTION: What's this?
-
-		// QUESTION: I used "goto", but it's almost never a good keyword to use. What could I use instead?
-		// CONSIDER: Is my use of "goto" justified here? Answer in your own words.
-	}
-}
-
-// HOMEWORK 2, HOMEWORK 3: Write two functions, one for finding the median of a list of numbers, and the other the mode.
-// CONSIDER using std::vector. EXTRA CREDIT for using std::array.
-
-// HOMEWORK 4: Write a function that prints the position of pieces on a chessboard.
-// Use capital letters for black pieces and lowercase letters for white pieces.
-// Use the following characters for the pieces: K/k = King, Q/q = Queen, R/r = Rook, B/b = Bishop, N/n = Knight, P/p = Pawn
-// Write outputs like this:
-// B2 B
-// C2 P
-// D2 n
-// Here indices are written as a letter followed by a number, with the letter indicating the column (file) and the number indicating the row (rank).
-// Ranks are numbered from 1 to 8, with 1 being the bottom rank and 8 being the top rank.
-// Files are lettered from A to H, with A being the leftmost file and H being the rightmost file.
-void print_piece_positions(char board[8][8]) {
-	// TODO
-}
-
-// EXTRA CREDIT: In HOMEWORK 3, also check if the arrangement of pieces is a valid chess position.
+// EXTRA CREDIT: Write HOMEWORK 1, 2, and 3 without using std::string OR char[] OR std::vector OR std::array.
 
 int main() {
-	float arr[] = {1, 1, 1, 1, 0.5F};
-	std::cout << mean(5, arr) << '\n';
-	std::cout << mean(std::vector(std::begin(arr), std::end(arr))) << '\n';
+	const auto str = "Hello World";
+	// QUESTION: What's the type of "Hello World"?
 
-	char chessboard[8][8] = {
-		{'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'},
-		{'P', 'P', 'P', 'P', '.', 'P', 'P', 'P'},
-		{'.', '.', '.', '.', '.', '.', '.', '.'},
-		{'.', '.', '.', 'p', '.', '.', '.', '.'},
-		{'.', '.', '.', '.', 'P', '.', '.', '.'},
-		{'.', '.', '.', '.', '.', '.', '.', '.'},
-		{'p', 'p', 'p', '.', 'p', 'p', 'p', 'p'},
-		{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
-	print_piece_positions(chessboard);
+	const std::string no_vowels = remove_vowels(str);
+	assert(no_vowels == "Hll Wrld");
+	// QUESTION: What is assert() doing here?
 
-	student_names_database_program();
+	uint16_t vowels, consonants;
+	// REVISE: Change the type of these variables so that the meaning of the program remains exactly the same.
+	count_vowels_and_consonants(no_vowels.c_str(), vowels, consonants);
+	// QUESTION: Why does this work?
+
+	assert(vowels == 0 && consonants == no_vowels.size() - 1);
+
+	try {
+		// Finale...
+		const std::string fib_chars = fibonacci_characters(no_vowels);
+		const std::remove_reference_t<decltype(fib_chars[0])> answer[] = {72, 108, 108, 108, 32, 114, 0};
+		// EXTRA CREDIT: What is the type of answer? Hint: it's a trick question! Notice anything peculiar about the array?
+		assert(fib_chars == answer);
+		std::cout << "Result: \"" << fib_chars << "\"\nAll tests passed!\n";
+	} catch (const std::exception& e) {
+		if (e.what() == std::string{not_implemented}) {
+			std::cout << "All tests passed!\n";
+		} else {
+			std::cerr << "Error: " << e.what() << '\n';
+		}
+	}
+
+	// REVISE: Give me an example of an escape character that does not get printed on the console but does something unique.
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
