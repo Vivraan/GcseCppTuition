@@ -4,14 +4,14 @@ Consolidated VS solution for all kids.
 
 ## Lesson plan with corresponding GCSE 9-1 (2021) J277/02 Section and scheduled and completed lesson dates
 
-1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) / 24 June 2023 `COMPLETE (James); ONGOING (Joshua)` 
-1. Arrays. (2.2.3) / 2 July 2023 `ONGOING (James)` 
-1. Strings as special arrays, string manipulation, maintainability. (2.2.3, 2.3.1) / 8 July 2023
-1. Structs as record data types. (2.2.3) / 15 July 2023
-1. Pointers and File I/O. (2.2.3) / 22 July 2023
-1. Random number generation, C-style. (2.2.3) / 29 July 2023
-1. Random number generation, C++-style. (2.2.3) / 5 August 2023
-1. Visual Studio and the debugger. (2.5.2) / 12 August 2023
+1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Joshua)` 
+1. Arrays and array-like containers, strings as special arrays. (2.2.3) `ONGOING (James)` 
+1. String manipulation; maintainability. (2.2.3, 2.3.1)
+1. Structs as record data types. (2.2.3)
+1. Pointers and File I/O. (2.2.3)
+1. Random number generation, C-style. (2.2.3)
+1. Random number generation, C++-style. (2.2.3)
+1. Visual Studio and the debugger. (2.5.2)
 1. SQL basics. (2.2.3) / TBD
 1. Searching algorithms. (2.1.3) / TBD
 1. Sorting algorithms. (2.1.3) / TBD
