@@ -35,7 +35,7 @@ std::string fibonacci_characters(const std::string& input) {
 	return "";
 }
 
-// EXTRA CREDIT: Write HOMEWORK 1, 2, and 3 without using std::string OR char[] OR std::vector OR std::array.
+// EXTRA CREDIT: Write HOMEWORK 1, 2, and 3 without using std::string OR char[] OR std::vector OR std::array OR pointers (directly).
 
 int main() {
 	const auto str = "Hello World";
