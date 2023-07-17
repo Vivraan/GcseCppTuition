@@ -4,7 +4,7 @@ Consolidated VS solution for all kids.
 
 ## Lesson plan with corresponding GCSE 9-1 (2021) J277/02 Section and scheduled and completed lesson dates
 
-1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Joshua)` 
+1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Josiah)` 
 1. Arrays and array-like containers, strings as special arrays. (2.2.3) `ONGOING (James)` 
 1. String manipulation; maintainability. (2.2.3, 2.3.1)
 1. Structs as record data types. (2.2.3)
