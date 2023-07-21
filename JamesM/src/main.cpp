@@ -3,26 +3,71 @@
 
 #include <cassert>
 #include <cstdint>
+#include <ctype.h>
 #include <iostream>
 #include <string>
 
 // EXTRA CREDIT: What does constexpr mean? Why is it useful?
+// Constexpr means that it is a constant and should be computed at compile time.
 constexpr char not_implemented[] = "Not implemented";
 
 // HOMEWORK 1: Write a function that takes a string and returns the number of vowels and consonants in it.
 void count_vowels_and_consonants(const char input[], uint16_t& vowels, uint16_t& consonants) {
-	throw std::exception(not_implemented);
 	vowels = 0;
 	consonants = 0;
+
+	for (int i = 0; input[i] != 0; i++) {
+
+		char letter = tolower(input[i]);
+
+		if (letter >= 'a' && letter <= 'z') {
+			switch (letter) {
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
+					vowels++;
+					break;
+				default:
+					consonants++;
+					break;
+			}
+		}
+	}
+
+	std::cout << "Vowels: " << vowels << " | Consonants: " << consonants << "\n";
 }
 // CONSIDER: What happens if you use pointers (int* a) instead of references (int& a)?
+// ???
+//
 // EXTRA CREDIT: How will you return multiple values without using '&' or '*'?
+// ???
 
 // HOMEWORK 2: Let's get funky! Write a function that takes a string and returns a string with the vowels removed.
 // Hint: you may want to use std::string for this.
 std::string remove_vowels(const std::string& input) {
-	throw std::exception(not_implemented);
-	return "";
+	std::string noVowel = "";
+
+	for (int i = 0; input[i] != 0; i++) {
+
+		char letter = tolower(input[i]);
+		switch (letter) {
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':;
+				break;
+			default:
+				noVowel = noVowel + input[i];
+				break;
+		}
+	}
+
+	std::cout << noVowel << "\n";
+
+	return noVowel;
 }
 // CONSIDER: Use std::string::erase() to remove characters from a string.
 // EXTRA CREDIT: Do this using a C-style string (char*) by allocating only 10% extra space at a time.
@@ -31,8 +76,20 @@ std::string remove_vowels(const std::string& input) {
 // Hint: The Fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21, ... (each number is the sum of the previous two).
 // Example: "Hello World" -> "Heell r"; "Dinosaurs" -> "Diinas"; "Fortnite" -> "Foorti"; "James" -> "Jaame"
 std::string fibonacci_characters(const std::string& input) {
-	throw std::exception(not_implemented);
-	return "";
+	std::string fibonacciString = "";
+	int a = 0, b = 1;
+
+	while (a <= input.size()) {
+		fibonacciString = fibonacciString + input[a];
+		std::cout << a << "\n";
+		int f = a + b;
+
+		a = b;
+		b = f;
+	}
+	std::cout << fibonacciString << "\n";
+
+	return fibonacciString;
 }
 
 // EXTRA CREDIT: Write HOMEWORK 1, 2, and 3 without using std::string OR char[] OR std::vector OR std::array OR pointers (directly).
@@ -40,10 +97,12 @@ std::string fibonacci_characters(const std::string& input) {
 int main() {
 	const auto str = "Hello World";
 	// QUESTION: What's the type of "Hello World"?
+	// const char * const
 
 	const std::string no_vowels = remove_vowels(str);
 	assert(no_vowels == "Hll Wrld");
 	// QUESTION: What is assert() doing here?
+	// It display an error and stops the program if the condition is not true.
 
 	uint16_t vowels, consonants;
 	// REVISE: Change the type of these variables so that the meaning of the program remains exactly the same.
@@ -57,6 +116,7 @@ int main() {
 		const std::string fib_chars = fibonacci_characters(no_vowels);
 		const std::remove_reference_t<decltype(fib_chars[0])> answer[] = {72, 108, 108, 108, 32, 114, 0};
 		// EXTRA CREDIT: What is the type of answer? Hint: it's a trick question! Notice anything peculiar about the array?
+		// James: The assert triggers for me despite the string being the same on both variables.
 		assert(fib_chars == answer);
 		std::cout << "Result: \"" << fib_chars << "\"\nAll tests passed!\n";
 	} catch (const std::exception& e) {
