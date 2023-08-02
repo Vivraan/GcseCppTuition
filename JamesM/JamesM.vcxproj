@@ -129,7 +129,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\FileOps.cpp" />
+    <ClCompile Include="src\Inventory_MODIFY.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\FileOps.h" />
+    <ClInclude Include="src\InventoryItem_MODIFY.h" />
+    <ClInclude Include="src\Inventory.h" />
+    <ClInclude Include="src\Recipe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

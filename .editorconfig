@@ -1,0 +1,2 @@
+[*.{c,h,cpp,hpp,cxx,hxx}]
+guidelines = 120 1px solid gray

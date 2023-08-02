@@ -5,8 +5,8 @@ Consolidated VS solution for all kids.
 ## Lesson plan with corresponding GCSE 9-1 (2021) J277/02 Section
 
 1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Josiah)` 
-1. Arrays and array-like containers, strings as special arrays. (2.2.3) `ONGOING (James)` 
-1. String manipulation; maintainability. (2.2.3, 2.3.1)
+1. Arrays and array-like containers, strings as special arrays. (2.2.3) `COMPLETE (James)` 
+1. String manipulation; maintainability. (2.2.3, 2.3.1) `ONGOING (James)`
 1. Structs as record data types. (2.2.3)
 1. Pointers and File I/O. (2.2.3)
 1. Random number generation, C-style. (2.2.3)
@@ -52,7 +52,7 @@ An optional activity meant to challenge the student. The student is encouraged t
 *The regular expression for matching these keywords in text can be debugged [here](https://www.debuggex.com/r/lBZe033_m_1584xV)*.
 
 ## Quality of life stuff (optional)
-1. On Visual Studio, install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter*:
+1. On Visual Studio, install the `SelectionTodoHighlighter.vsix` extension and add the following to its settings under *Environment > Selection and TODO Highlighter* to highlight all the keywords used in the code comments.:
 
 	1. *Features > Highlight selection* = `False`
 	1. *Search > Include strings* = `False`
@@ -60,6 +60,6 @@ An optional activity meant to challenge the student. The student is encouraged t
 	1. *Selection > Select letter or digit only* = `False`
 	1. *TODO > TODO words* = `TODO|HACK|EXTRA CREDIT|HOMEWORK ?[0-9]*|REVISE|QUESTION|CONSIDER| ?-? ?[0-9] STARS?:?`
 
-1. Install ReSharper for Visual Studio and use the provided `*.sln.DotSettings` file.
+1. Install the `Editor Guidelines.vsix` extension. Everything is already set up in the project to use it.
 
-This will highlight all the keywords used in the code comments.
+1. Install ReSharper for Visual Studio and use the provided `*.sln.DotSettings` file.
