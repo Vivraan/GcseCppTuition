@@ -22,10 +22,11 @@ Inventory ReadInventoryFromCsvText(std::string_view csvText)
 
 /**
  * \brief Prompts the user for which recipe they want to use and the cost they can shell out (budget).
- * Players get 500 doubloons to start with, and they can also count the total worth of all their inventory items needed in a recipe in their budget.
+ * Players get 500 doubloons to start with, and they can also count the total worth of all
+ * their inventory items needed in a recipe in their budget.
  * \param inventory the inventory to modify.
  */
-void ModifyInventory(Inventory& inventory)
+void CookFoodItems(Inventory& inventory)
 {
     // TODO: Add your code here.
     // This will be quite challenging so we'll work on this for quite some time!

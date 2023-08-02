@@ -10,7 +10,7 @@
 int main()
 {
     Inventory inventory = ReadInventoryFromCsvText(LoadTextFromFile("OldInventory.csv"));
-    ModifyInventory(inventory);
+    CookFoodItems(inventory);
     SaveTextToFile("NewInventory.csv", WriteInventoryToCsvText(inventory.cbegin(), inventory.cend()));
 }
 

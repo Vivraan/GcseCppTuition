@@ -9,5 +9,5 @@
 using Inventory = std::vector<InventoryItem>;
 
 Inventory ReadInventoryFromCsvText(std::string_view csvText);
-void ModifyInventory(Inventory& inventory);
+void CookFoodItems(Inventory& inventory);
 std::string WriteInventoryToCsvText(const Inventory::const_iterator& invBegin, const Inventory::const_iterator& invEnd);
