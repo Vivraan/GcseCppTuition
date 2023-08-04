@@ -102,6 +102,7 @@ Recipe AskForRecipe(const Inventory& inventory)
 
     // TODO(james): ask the player for a recipe name. If they type "quit", don't ask them again.
     // TODO(james): The only accepted inputs are "apple candy" and "pancakes".
+    // TODO(james): Also check if the player has enough ingredients to make the recipe.
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ANSWER START
 
