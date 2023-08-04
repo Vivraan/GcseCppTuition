@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FileOps.h" />
-    <ClInclude Include="src\InventoryItem_MODIFY.h" />
+    <ClInclude Include="src\InventoryItem.h" />
     <ClInclude Include="src\Inventory.h" />
     <ClInclude Include="src\Recipe.h" />
   </ItemGroup>

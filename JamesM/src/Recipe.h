@@ -11,7 +11,7 @@
 struct RecipeItem
 {
     std::string Name;
-    uint32_t Quantity;
+    int Quantity{};
 };
 
 /**
@@ -19,16 +19,16 @@ struct RecipeItem
  */
 struct Recipe
 {
-    std::vector<RecipeItem> Ingredients;
+    std::vector<RecipeItem> Ingredients{};
     RecipeItem Dish;
 };
 
-inline Recipe appleCandyRecipe{
+inline const Recipe APPLE_CANDY_RECIPE{
     {{"apple", 13},
      {"sugar pouch", 3},
      {"water bottle", 1}},
     {"apple candy", 5}};
 
-inline Recipe pancakesRecipe{
+inline const Recipe PANCAKES_RECIPE{
     {{"egg", 2}, {"flour pouch", 1}, {"sugar pouch", 1}},
     {"pancakes", 2}};

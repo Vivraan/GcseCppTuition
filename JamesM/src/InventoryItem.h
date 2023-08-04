@@ -7,4 +7,7 @@
 struct InventoryItem
 {
     // TODO: Add your code here.
+    std::string Name;
+    float Cost;
+    int Count;
 };

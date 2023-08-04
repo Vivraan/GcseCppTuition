@@ -10,8 +10,10 @@
 int main()
 {
     Inventory inventory = ReadInventoryFromCsvText(LoadTextFromFile("OldInventory.csv"));
-    CookFoodItems(inventory);
-    SaveTextToFile("NewInventory.csv", WriteInventoryToCsvText(inventory.cbegin(), inventory.cend()));
+    const Recipe recipe = AskForRecipe(inventory);
+    const float budget = AskForBudget(inventory, recipe);
+    CookFoodItems(inventory, recipe, budget);
+    SaveTextToFile("NewInventory.csv", WriteInventoryToCsvText(inventory));
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
