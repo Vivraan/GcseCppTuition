@@ -19,17 +19,17 @@ Consolidated VS solution for all kids.
 
 ## Keywords used inside the code
 
-### `HOMEWORK <0-5>` exercises: 1-5 stars
+### `HOMEWORK <0-5>` exercises
 
 An assignment which the student must improvise and complete on their own. There shouldn't be more than 5 homework assignments per lesson. The student is expected to complete this assignment before the next lesson.
 
-### `REVISE` exercises: 1-2 stars
+### `REVISE` exercises
 
 A section of code which the student revises to improve their understanding of the code. The student is encouraged to make changes to it and observe the effects.
 
 `REVISE` exercises should ideally be completed immediately after the lesson, but may be completed at any time before the next lesson.
 
-### `QUESTION`s: 2-5 stars
+### `QUESTION`s
 
 A question which the student must answer. The student is expected to answer in their own words. 
 
@@ -37,13 +37,13 @@ A question which the student must answer. The student is expected to answer in t
 
 `QUESTION`s from one lesson should be answered in the next.
 
-### `CONSIDER` activities: 3-5 stars
+### `CONSIDER` activities
 
 An optional activity which the student is encouraged to think about. The student is encouraged to complete this activity on their own time.
 
 `CONSIDER` activities pertain to code which is likely to appear in the syllabus but a few steps ahead of the lesson material.
 
-### `EXTRA CREDIT` activities: 7 stars
+### `EXTRA CREDIT` activities
 
 An optional activity meant to challenge the student. The student is encouraged to complete this activity on their own time, preferably after dealing with the `CONSIDER` activities.
 
