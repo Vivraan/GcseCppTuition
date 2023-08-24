@@ -5,12 +5,11 @@ Consolidated VS solution for all kids.
 ## Lesson plan with corresponding GCSE 9-1 (2021) J277/02 Section
 
 1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Josiah)` 
-1. Arrays and array-like containers, strings as special arrays. (2.2.3) `COMPLETE (James)` 
-1. String manipulation; maintainability. (2.2.3, 2.3.1) `ONGOING (James)`
-1. Structs as record data types. (2.2.3)
-1. Pointers and File I/O. (2.2.3)
+1. Arrays and array-like containers, strings as special arrays. (2.2.3) `COMPLETE (James)`
+1. String manipulation; maintainability. (2.2.3, 2.3.1) `COMPLETE (James)`
+1. Structs as record data types. (2.2.3) `COMPLETE (James)`
+1. Pointers and File I/O. (2.2.3) `ONGOING (James)`
 1. Random number generation, C-style. (2.2.3)
-1. Random number generation, C++-style. (2.2.3)
 1. Visual Studio and the debugger. (2.5.2)
 1. SQL basics. (2.2.3) / TBD
 1. Searching algorithms. (2.1.3) / TBD
