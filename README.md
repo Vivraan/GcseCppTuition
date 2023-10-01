@@ -6,7 +6,7 @@ Consolidated VS solution for all kids.
 
 1. Revision of C++ types, loops, branches, input and output, and functions, and basic input validation. (2.2.1, 2.2.3, 2.3.1) `COMPLETE (James); COMPLETE (Josiah)` 
 1. Arrays and array-like containers, strings as special arrays. (2.2.3) `COMPLETE (James); ONGOING(Josiah)`
-1. String manipulation; maintainability. (2.2.3, 2.3.1) `COMPLETE (James)`
+1. String manipulation; maintainability. (2.2.3, 2.3.1) `COMPLETE (James); ONGOING (Josiah)`
 1. Structs as record data types. (2.2.3) `COMPLETE (James)`
 1. Pointers and File I/O. (2.2.3) `COMPLETE (James)`
 1. Random number generation, C-style. (2.2.3) `ONGOING (James)`
