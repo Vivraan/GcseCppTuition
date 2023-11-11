@@ -8,7 +8,7 @@ Consolidated VS solution for all kids.
 1. Arrays and array-like containers (std::vector<>, std::array<>), strings as special arrays. (2.2.3) `COMPLETE (James); COMPLETE(Josiah)`
 1. String manipulation; maintainability. (2.2.3, 2.3.1) `COMPLETE (James); COMPLETE (Josiah)`
 1. Structs as record data types. (2.2.3) `COMPLETE (James); ONGOING (Josiah)`
-1. Pointers and File I/O. (2.2.3) `COMPLETE (James)`
+1. Pointers and File I/O. (2.2.3) `COMPLETE (James), ONGOING (Josiah -- File I/O)`
 1. Random number generation, C-style. (2.2.3) `COMPLETE (James)`
 1. Visual Studio and the debugger. (2.5.2)
 1. SQL basics. (2.2.3) / TBD
